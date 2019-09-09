@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+option java_package = "com.example.flutterphotometa.protobuf";
+option java_outer_classname = "FlutterPlugins";
+
+enum ValidMethod {
+    UNKNOWN = 0;
+    GET_PHOTO = 1;
+    LIST_PHOTOS = 3;
+    GET_PHOTO_METADATA = 4;
+    REMOVE_PHOTO_METADATA = 5;
+}
+
+enum DataType {
+    NULL = 0;
+    BOOL = 1;
+    INT32 = 2;
+    INT64 = 3;
+    FLOAT64 = 4;
+    STRING = 5;
+    UINT8LIST = 6;
+    INT32LIST = 7;
+    INT64LIST = 8;
+    FLOAT32LIST = 9;    // Dart Does not contain Float32List for buffer writer
+    FLOAT64LIST = 10;
+    LIST = 11;
+    MAP = 12;
+    MESSAGE = 13;
+}

@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+option java_package = "com.example.flutterphotometa.protobuf";
+option java_outer_classname = "PhotoApis";
+
+// Photo data information
+message Photo {
+    // name of file represent the photo
+    string name = 1;
+    // photo size in pixel
+    int32 width = 2;
+    int32 height = 3;
+    // photo path (Android) or id (iOS) depend on platform specific
+    string localIdentifier = 4;
+    // photo file size in bytes
+    int64 fileSize = 5;
+}
+
+// All photo list
+message Photos {
+    repeated Photo photos = 1;
+}
+
+// Geograpical location
+message Location {
+    double latitude = 1;
+    double longitude = 2;
+}
+
+// Photo Metadata content sensitive information
+message PhotoMetadata {
+    // date and time when photo is taken
+    int64 captureAt = 1;
+    // a geographical location where photo is taken
+    Location location = 2;
+    // a company who produce the camera
+    string make = 3;
+    // photo file size in bytes
+    int64 fileSize = 5;
+    // more can be included .....
+}

@@ -4,7 +4,7 @@
 
 It's required you to have a unix like platform or at least a platform that support run make command if you will to use the predefine command to generate protobuf.
 
-To generate protobuf code run command `make genproto`, then start the fullter app with `flutter run`.
+To generate protobuf code run command `make genproto`, then start the flutter app with `flutter run`.
 
 ## Key features ##
 
